@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-12">
+    <h2 class="pb-2 border-bottom">{{ idConta ? 'Editar' : 'Cadastrar' }} Contas</h2>
+  </div>
+</div>
+<form [formGroup]="contasForm" (ngSubmit)="cadastrar()">
+  <div class="col">
+      <div class="mb-3">
+        <label class="form-label">Número</label>
+        <input type="text" class="form-control" id="numero" formControlName="numero" maxlength="6" minlength="6">
+        <div class="form-text">Digite o número da sua conta.</div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="mb-3">
+        <label class="form-label">Agência</label>
+        <input type="text" class="form-control" id="agencia" formControlName="agencia" maxlength="4" minlength="4">
+      </div>
+    </div>
+  <div class="col">
+      <div class="mb-3">
+        <label class="form-label">Saldo</label>
+        <input type="text" class="form-control" id="saldo" formControlName="saldo">
+      </div>
+    </div>
+  <button type="submit" [disabled]="!contasForm.valid" class="btn btn-primary">
+    {{idConta ? 'Editar' : 'Cadastrar' }}
+  </button>
+</form>
+

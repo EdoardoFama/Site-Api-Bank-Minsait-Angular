@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-12">
+      <h2 class="pb-2 border-bottom">Saque <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="account_balance_wallet"></mat-icon></h2>
+    </div>
+  </div>
+  <form [formGroup]="saqueForm" (ngSubmit)="cadastrar()">
+    <div class="col">
+      <div class="col">
+        <div class="mb-3">
+          <label class="form-label">Agência</label>
+          <input type="text" class="form-control"formControlName="agencia" maxlength="4" minlength="4">
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <label class="form-label">Número da Conta</label>
+          <input type="text" class="form-control" formControlName="numeroConta" maxlength="6" minlength="6">
+        </div>
+      </div>
+    </div>
+      <div class="col">
+        <div class="mb-3">
+          <label class="form-label">Valor</label>
+          <input type="text" class="form-control" formControlName="valor">
+        </div>
+      </div>
+  <button type="submit" [disabled]="!saqueForm.valid" class="btn btn-primary">
+    Sacar
+  </button>
+</form>
+
+

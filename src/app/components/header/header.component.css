@@ -1,0 +1,33 @@
+  .navbar {
+    font-family: 'SohoGothicPro-Light';
+
+  }
+
+li {
+  margin: 15px;
+  font-size: small;
+  height: 50px;
+
+
+}
+
+div {
+  size: 10px;
+}
+
+a {
+  font-size: small;
+}
+
+div {
+  size: 10px;
+}
+
+.logoinstagram {
+  height: 60px;
+  padding: 10px;
+}
+
+.logolinkedin {
+  height: 40px;
+}
